@@ -1,7 +1,7 @@
 # YAML file for automated .ssc script generation
 # converted paths for GMT Mac
 ---
-image_path: "/image_test"
+image_path: "/data/image_train_val"
 
 # Image orientation and field of view
 azi: 0
@@ -17,7 +17,7 @@ longstart: -74
 longend:   -78
 
 # Date and time settings
-dtstart: '2020-08-06T02:00:00'
-dtend:   '2020-06-01T08:00:00'
+dtstart: '2024-08-06T02:00:00'
+dtend:   '2024-06-01T08:00:00'
 
-number_images: 10
+number_images: 1000

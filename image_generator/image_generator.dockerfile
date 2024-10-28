@@ -5,14 +5,15 @@ FROM ubuntu
 # Prevents questions from hanging the build
 ARG DEBIAN_FRONTEND=noninteractive
 
-RUN apt-get update && \
-    apt-get install -y stellarium && \
-		apt-get install -y xvfb && \
-		apt-get install -y python3-pip && \
-		apt-get install -y automake autotools-dev fuse g++ git libcurl4-openssl-dev libfuse-dev libssl-dev libxml2-dev make pkg-config && \
-		apt-get install -y s3fs && \
-		pip3 install PyYAML && \
-		pip3 install numpy
+RUN apt-get update 
+
+RUN apt-get install -y stellarium
+RUN apt-get install -y xvfb 
+RUN apt-get install -y python3-pip 
+RUN apt-get install -y automake autotools-dev fuse g++ git libcurl4-openssl-dev libfuse-dev libssl-dev libxml2-dev make pkg-config 
+RUN apt-get install -y s3fs 
+RUN pip3 install --break-system-packages PyYAML 
+RUN pip3 install --break-system-packages numpy
 		
 		
 ADD get_skies.py /

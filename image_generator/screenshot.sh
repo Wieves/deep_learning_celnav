@@ -9,5 +9,5 @@ export DISPLAY=":89"
 export LD_PRELOAD=/usr/lib/fglrx/libGL.so.1.2.xlibmesa
 
 # Generate the files and save them to the cloud
-stellarium --startup-script get_multi_sky.ssc
+stellarium --startup-script get_multi_sky.ssc --config-file default_cfg.ini
 killall Xvfb

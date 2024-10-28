@@ -14,7 +14,7 @@ def main():
         # The default version of Pyyaml with the NVIDIA image does
         # not include FullLoader, so we have to fall back to the
         # pre-2019 syntax
-        config_data = yaml.load(config_file)
+        config_data = yaml.load(config_file, Loader=yaml.FullLoader)
     
     #TODO:  This can be done better with an eval function and a loop
     image_dir     = config_data['image_path']
