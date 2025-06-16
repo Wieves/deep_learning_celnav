@@ -98,7 +98,7 @@ def haversine_loss(y_true, y_pred, denorm=(36.0, 4.0, -78.0, 4.0), R=3443.92):
 def main():
     # Parse the yaml file
     with open('/training.yml') as config_file:
-        config_data = yaml.load(config_file)
+        config_data = yaml.safe_load(config_file)
         set_path    = config_data['set_path']
         model_path  = config_data['model_path']
         lr          = config_data['lr']
